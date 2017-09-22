@@ -1,0 +1,20 @@
+<div class=col-md-6>
+  <div class="panel panel-info">
+    <div class="panel-heading">{{title}}</div>
+    <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label for="dbName">Database Name</label>
+          <select class="form-control" [(ngModel)]="database.dbName" name="dbName" 
+          (ngModelChange)="database.password=''; showPassword = true">
+              <option *ngFor="let config of dbConfigs" [value]="config.dbCustomName">{{config.dbCustomName}}</option>
+          </select>
+          <div [hidden]="database.dbName == undefined || database.dbName == ''">
+          <label for="dbPassword">Password</label>
+          <input type="password" class="form-control" name="dbPassword" [(ngModel)]="database.password">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

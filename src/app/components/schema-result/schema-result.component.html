@@ -1,0 +1,56 @@
+<div>
+  <!--<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#tableresult">Table Result</a></li>
+    <li><a data-toggle="tab" href="#viewresult">View Result</a></li>
+    <li><a data-toggle="tab" href="#packageresult">Package Result</a></li>
+    <li><a data-toggle="tab" href="#sequenceresult">Sequence Result</a></li>
+    <li><a data-toggle="tab" href="#procedureresult">Procedure Result</a></li>
+    <li><a data-toggle="tab" href="#functionresult">Function Result</a></li>
+  </ul>-->
+  
+ <nav role="navigation" class="navbar" style="margin-bottom: 0;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar" style="background: darkgray;"></span>
+            <span class="icon-bar" style="background: darkgray;"></span>
+            <span class="icon-bar" style="background: darkgray;"></span>
+        </button>
+        <a class="navbar-brand">Schema Result</a>
+    </div>
+    <!-- Collection of nav links and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a data-toggle="tab" href="#tableresult">Table Result</a></li>
+            <li><a data-toggle="tab" href="#viewresult">View Result</a></li>
+            <li><a data-toggle="tab" href="#packageresult">Package Result</a></li>
+            <li><a data-toggle="tab" href="#sequenceresult">Sequence Result</a></li>
+            <li><a data-toggle="tab" href="#procedureresult">Procedure Result</a></li>
+            <li><a data-toggle="tab" href="#functionresult">Function Result</a></li>
+            <!--<li><a data-toggle="tab" href="#">Export all Results</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+  <div class="tab-content tab-content-data">
+    <div id="tableresult" class="tab-pane fade in active">
+      <app-table-result [tableResultList]="schemaResult? schemaResult.tableResultList:null"></app-table-result>
+    </div>
+    <div id="viewresult" class="tab-pane fade">
+      <app-view-result [viewResultList]="schemaResult? schemaResult.viewResultList:null"></app-view-result>
+    </div>
+    <div id="packageresult" class="tab-pane fade">
+      <app-package-result [packageResultList]="schemaResult? schemaResult.packageResultList:null"></app-package-result>
+    </div>
+    <div id="sequenceresult" class="tab-pane fade">
+      <app-sequence-result [sequenceResultList]="schemaResult? schemaResult.sequenceResultList:null"></app-sequence-result>
+    </div>
+    <!--<div id="procedureresult" class="tab-pane fade">
+      <app-procedure-result [procedureResultList]="schemaResult? schemaResult.procedureResultList:null"></app-procedure-result>
+    </div>
+    <div id="functionresult" class="tab-pane fade">
+      <app-function-result [functionResultList]="schemaResult? schemaResult.functionResultList:null"></app-function-result>
+    </div>-->
+  </div>
+</div>

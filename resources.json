@@ -1,0 +1,17 @@
+[{
+		"dbCustomName": "DB1",
+		"host": "localhost",
+		"serviceName": "xe",
+		"port": "1521",
+		"sid": "",
+		"dbOwner": "DB1",
+		"userName": "DB1"
+	}, {
+		"dbCustomName": "DB2",
+		"host": "localhost",
+		"serviceName": "xe",
+		"port": "1521",
+		"sid": "",
+		"dbOwner": "DB2",
+		"userName": "DB2"
+	}]

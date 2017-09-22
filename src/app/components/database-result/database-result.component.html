@@ -1,0 +1,15 @@
+<div>
+  <h4>Database Compare Result</h4>
+  <div style="padding:10px; margin:10px">
+    <label class="radio-inline"><input type="radio" name="selectResult" [(ngModel)]="showData" value='schema'>Schema Result</label>
+    <label class="radio-inline"><input type="radio" name="selectResult" [(ngModel)]="showData" value ='data'>Data Result</label>
+  </div>
+  <div>
+    <div id="schemaresult" [hidden]="showData != 'schema'">
+      <app-schema-result [schemaResult]="databaseResult? databaseResult.schemaResult:null"></app-schema-result>
+    </div>
+    <div id="dataresult" [hidden]="showData != 'data'">
+      <app-data-result [dataResult]="databaseResult? databaseResult.dataResult:null"></app-data-result>
+    </div>
+  </div>
+</div>

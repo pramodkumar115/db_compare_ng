@@ -1,0 +1,26 @@
+<style>
+    select.form-control option {
+        padding: 10px;
+    }
+</style>
+<form>
+    <div class="panel panel-primary">
+        <div class="panel-heading">DB Configurations</div>
+        <div class="panel-body">
+            <div class="row">
+                <app-db-panel [dbConfigs]="dbConfigs" [database]="fromDB" [title]="fromDBTitle">Loading...</app-db-panel>
+                <app-db-panel [dbConfigs]="dbConfigs" [database]="toDB" [title]="toDBTitle">Loading...</app-db-panel>
+                <div style="padding: 20px">
+                    <button type="submit" class="btn btn-primary pull-right" style="margin: 5px" 
+                    (click)="getDBDifference()">Submit</button>
+                    <button type="reset" class="btn btn-warning pull-right" style="margin: 5px" (click)="resetDBDiff()">Reset</button>
+                </div>
+            </div>
+            <div class="alert alert-warning" [hidden]="!loading" style="margin:10px">
+                Comparision in process.. Please wait...
+            </div>
+        </div>
+    </div>
+
+    <app-database-result *ngIf="databaseResult != null" [databaseResult]="databaseResult"></app-database-result>
+</form>
